@@ -5,6 +5,6 @@ RUN mkdir -p /usr/app/src
 
 ONBUILD ADD ./src /usr/app/src \&&
 		ADD ./pom.xml /usr/app
-RUN echo $JAVA_HOME
+WORKDIR /usr/app
 
 RUN mvn clean package
