@@ -52,7 +52,7 @@
 					<server>TomcatServer</server>
 					<path>/ComputerDatabase</path>
 					<update>true</update>
-					<url>http://localhost:8080/manager/text</url>
+					<url>http://localhost:8081/manager/text</url>
 					<username>admin</username>
 					<password>admin</password>
 				</configuration>

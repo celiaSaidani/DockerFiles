@@ -16,12 +16,13 @@ RUN groupadd tomcat && \
     chmod -R g+r $TOMCAT_HOME/conf && \
     chmod g+x $TOMCAT_HOME/conf && \
     rm -rf apache-tomcat-$TOMCAT_VERSION.tar.gz
-    WORKDIR /
+
+WORKDIR /
 
 ADD tomcat-run.sh /tomcat-run.sh
-ADD setting.xml $TOMCAT_HOME/conf/setting.xml
+ADD settings.xml $TOMCAT_HOME/conf/settings.xml
 ADD tomcat-users.xml $TOMCAT_HOME/conf/tomcat-users.xml
-ADD context.xml $TOMCAT_HOME/webapps/manager/META-INF/context.xml
 RUN chmod 755 /*.sh
 
 EXPOSE 8080
+ENTRYPOINT ["/tomcat-run.sh"]
