@@ -1,9 +1,10 @@
 
 FROM celiasaidani/maven
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /usr/app/src
 
-ONBUILD ADD . /usr/src/app
+ONBUILD ADD ./src /usr/app/src \&&
+		ADD ./pom.xml /usr/app
+RUN echo $JAVA_HOME
 
-ONBUILD RUN mvn install
+RUN mvn clean package
