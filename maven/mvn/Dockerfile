@@ -18,6 +18,7 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 WORKDIR /
 
 COPY mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
+RUN chmod +x /usr/local/bin/mvn-entrypoint.sh
 COPY settings-docker.xml /usr/share/maven/ref/
 
 VOLUME "$USER_HOME_DIR/.m2"

@@ -33,7 +33,7 @@ public class ConnectionDB {
         
         HikariConfig config  = new HikariConfig();
         config.setDriverClassName("com.mysql.jdbc.Driver");
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/computer-database-db?useSSL=false&zeroDateTimeBehavior=convertToNull");
+        config.setJdbcUrl("jdbc:mysql://instanceTest/computer-database-db?useSSL=false&zeroDateTimeBehavior=convertToNull");
         config.setMaximumPoolSize(20);
         config.setUsername("admincdb");
         config.setPassword("qwerty1234");
