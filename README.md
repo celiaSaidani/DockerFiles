@@ -28,7 +28,4 @@
 `docker network create prod-network`<br />
 `docker network connect prod-network mysql-Prod`<br />
 
-### Credit
-Based on [official] maven repository. 
-[1]: https://hub.docker.com/_/debian/
 
