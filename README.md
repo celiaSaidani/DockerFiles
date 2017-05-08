@@ -7,11 +7,11 @@
 ### Run
 
 ## Create Dockerfile
-* Create a Dockerfile from celiasaidani/maven:onbuild
+* Create a Dockerfile from celiasaidani/maven:onbuild (for testing java+maven)
 * Build the image:
-`docker build -t mysql .`
+`docker build -t mavenonbuild .`
 * Run an instance test of the image:
-`docker run -it --name mysqlInstanceTest mysql`
+`docker run -it --name mevenOnBuild mavenonbuild`
 
 * Create a Dockerfile from celiasaidani/maven
 * Build the image: 
@@ -19,7 +19,7 @@
 * Run an instance of the image:
 `docker run -it --name mavenInstance maven`
 
-## For testing (java+maven) with mysql: uses Test-network
+## For testing (java+maven) with mysql: uses test-network
 `docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/maven -w /usr/src/maven --net=test-network  celiasaidani/maven mvn clean test`
 
 ### Credit
