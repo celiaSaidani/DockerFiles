@@ -2,17 +2,16 @@
 * This image uses [Debian][1] 8 _(jessie)_.
 
 ### Content
-* Oracle Java _8_ : JDK & JRE.
-* Maven `3.5`
+* Mysql ``
 
 ### Run
 
 ## Create Dockerfile
 * Create a Dockerfile from celiasaidani/maven:onbuild
 * Build the image:
-`docker build -t mavenonbuild .`
-* Run an instance of the image:
-`docker run -it --name mavenOnbuildInstance mavenonbuild`
+`docker build -t mysql .`
+* Run an instance test of the image:
+`docker run -it --name mysqlInstanceTest mysql`
 
 * Create a Dockerfile from celiasaidani/maven
 * Build the image:
@@ -21,7 +20,7 @@
 `docker run -it --name mavenInstance maven`
 
 ## For testing (java+maven) with mysql: uses Test-network
-docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/maven -w /usr/src/maven --net=Test-network  celiasaidani/maven mvn clean test
+`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/maven -w /usr/src/maven --net=Test-network  celiasaidani/maven mvn clean test`
 
 ### Credit
 Based on [official] maven repository. 
