@@ -20,6 +20,9 @@
 * insert table test in database:<br />
 `mysql -u <USER> -p<YOURPASSWORD> 127.0.0.1 -port=3306<./setup/1-SCHEMA.sql`<br />
 `mysql -u <USER> -p<YOURPASSWORD> 127.0.0.1 -port=3306<./setup/2-PRIVILEGES.sql` <br />
+### Docker network
+`docker network create test-network`<br />
+`docker network connect test-network mysql-Test`<br />
 
 ### Credit
 Based on [official] maven repository. 
