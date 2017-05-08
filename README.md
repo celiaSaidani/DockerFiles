@@ -14,13 +14,13 @@
 `docker run -it --name mysqlInstanceTest mysql`
 
 * Create a Dockerfile from celiasaidani/maven
-* Build the image:
+* Build the image: 
 `docker build -t maven .`
 * Run an instance of the image:
 `docker run -it --name mavenInstance maven`
 
 ## For testing (java+maven) with mysql: uses Test-network
-`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/maven -w /usr/src/maven --net=Test-network  celiasaidani/maven mvn clean test`
+`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/maven -w /usr/src/maven --net=test-network  celiasaidani/maven mvn clean test`
 
 ### Credit
 Based on [official] maven repository. 
