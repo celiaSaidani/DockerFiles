@@ -20,13 +20,15 @@
 * insert table test in database:<br />
 `mysql -u <USER> -p<YOURPASSWORD> 127.0.0.1 -port=3306<./setup/1-SCHEMA.sql`<br />
 `mysql -u <USER> -p<YOURPASSWORD> 127.0.0.1 -port=3306<./setup/2-PRIVILEGES.sql` <br />
-### Docker network
+### Docker network for testing with maven
 `docker network create test-network`<br />
 `docker network connect test-network mysql-Test`<br />
 
+### Docker network for testing with tomcat
+`docker network create prod-network`<br />
+`docker network connect prod-network mysql-Prod`<br />
+
 ### Credit
 Based on [official] maven repository. 
-(Only difference, this image is using Oracle JDK instead of OpenJDK).
-
 [1]: https://hub.docker.com/_/debian/
-[2]: https://hub.docker.com/_/maven/
+
